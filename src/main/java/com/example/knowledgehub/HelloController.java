@@ -20,4 +20,13 @@ public class HelloController {
                 "Твое имя"
         );
     }
+
+    @GetMapping("/api/status")
+    public AppStatus CheckStatus() {
+        return new AppStatus(
+                "running",
+                "5 minutes",
+                "connected"
+        );
+    }
 }
